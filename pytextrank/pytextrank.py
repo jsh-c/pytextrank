@@ -325,7 +325,7 @@ def write_dot (graph, ranks, path="graph.dot"):
         dot.edge(edge[0], edge[1], constraint="false")
 
     with open(path, 'w') as f:
-        f.write(dot.source)
+        f.write(dot.source.encode('utf8'))
 
 
 def render_ranks (graph, ranks, dot_file="graph.dot"):
